@@ -14,4 +14,4 @@ start(Args) ->
   erlang:halt(0).
 
 process_event({Type, Data}) ->
-  io:format("Event: ~p (~p)~n", [ Type, Data ]).
+  apply(events, Type, [ Data ]).
