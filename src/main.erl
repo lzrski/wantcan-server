@@ -1,10 +1,13 @@
 -module(main).
-
 -export(
-  [ main/1
+  [ start/0
+  , start/1
   ]
 ).
 
-main(Args) ->
-  io:format("Hello, ~w~n", [ Args ]),
+start() ->
+  start([]).
+
+start(Args) ->
+  ok = helper:greeting(),
   erlang:halt(0).

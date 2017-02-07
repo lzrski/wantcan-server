@@ -21,5 +21,8 @@ docker run \
   --volume "$PWD":"/app" \
   --workdir "/app" \
   erlang \
-  escript ebin/main.beam
+  erl \
+    -noshell \
+    -pa "ebin" \
+    -run main
 ```
