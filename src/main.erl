@@ -9,5 +9,6 @@ start() ->
   start([]).
 
 start(Args) ->
-  ok = helper:greeting(),
+  { ok, Terms } = events_log:read(),
+  io:format("Here: ~w~n.", [ Terms ]),
   erlang:halt(0).

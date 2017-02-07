@@ -1,0 +1,2 @@
+{ state_goal, { { 2017, 02, 07 }, <<"be healthy at 100">>, { 2084, 08, 28 } } }.
+{ state_goal, { { 2017, 02, 07 }, <<"own a house in NL">>, { 2023, 09, 28 } } }.
