@@ -10,5 +10,8 @@ start() ->
 
 start(Args) ->
   { ok, Terms } = events_log:read(),
-  io:format("Here: ~w~n.", [ Terms ]),
+  lists:map(fun process_event/1, Terms),
   erlang:halt(0).
+
+process_event({Type, Data}) ->
+  io:format("Event: ~p (~p)~n", [ Type, Data ]).
